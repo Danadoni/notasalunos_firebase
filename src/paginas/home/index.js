@@ -8,8 +8,8 @@ export default function Home() {
     const navigation = useNavigation();
   const [alunos,setAlunos] = useState([]);
 
-  function irDetalhes(name,n1,n2,n3,img){
-    navigation.navigate("Detalhes",{nome:name,nota1:n1,nota2:n2,nota3:n3,imagem:img})
+  function irDetalhes(name,n1,n2,n3,img,key){
+    navigation.navigate("Detalhes",{nome:name,nota1:n1,nota2:n2,nota3:n3,imagem:img,key:key})
   }
 
   useEffect(()=>{
@@ -64,6 +64,7 @@ export default function Home() {
                 item.nota2,
                 item.nota3,
                 item.imagem,
+                item.key
                 )}>
                 
 
